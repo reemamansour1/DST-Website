@@ -1,0 +1,118 @@
+/* dashboard.css */
+
+
+/* body and html */
+
+
+html, body{
+    height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0F172A;
+  font-family: 'Helvetica', sans-serif;
+  color: #ffffff; /* white text */
+  display: flex;
+  flex-direction: column;
+}
+/* HEADER */
+.dashboard-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical alignment */
+    align-items: center;       /* horizontal alignment */
+    text-align: center;        /* center the text itself */
+    min-height: 200px;         /* or use height: 100vh; for full screen */
+    padding: 20px;
+}
+/* BUTTON */
+
+.btn{
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.75rem 2rem;
+    background-color: #6366F1;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+.btn:hover {
+  background-color: #818CF8;
+}
+
+/* CONTAINER */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards in first row */
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+  flex:1;
+}
+
+
+/* CARDS */
+
+.dashboard-card {
+  background-color: #003366; /* Dark blue */
+  color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  min-height: 180px;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.dashboard-card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: #ffffff; /* Accent color */
+}
+
+.dashboard-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #dcdcdc;
+}
+
+/* Ensure 3 cards on top, 2 on second row */
+.dashboard-card:nth-child(4) {
+  grid-column: 1;
+}
+
+
+/* FOOTER */
+
+ .dashboard-footer{
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.9rem;
+  color: #94A3B8;
+  background-color: #0F172A;
+}
+
+.dashboard-footer a {
+  color: #6366F1;
+  text-decoration: none;
+}
+
+.dashboard-footer a:hover {
+  color: #818CF8;
+}
+

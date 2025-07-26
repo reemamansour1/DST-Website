@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Structures Visualizer</title>
+  <link rel="stylesheet" href="visualPages.css" />
+  <link rel="shortcut icon" href="favicon.ico" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <h2 class="logo">DSA Visualizer</h2>
+
+      <!-- Hamburger Icon -->
+      <div class="menu-button" id="menu-toggle">☰</div>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="StackArray.html">Stack: Array</a></li>
+        <li><a href="StackLL.html">Stack: Linked List</a></li>
+        <li><a href="QueueArray.html">Queue: Array</a></li>
+        <li><a href="QueueLL.html">Queue: Linked List</a></li>
+        <li><a href="BST.html">Binary Search Trees</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div>
+      <header class="hero">
+      <h1>Data Structures Visualizer</h1>
+      <p>Explore how stacks, queues, and binary search trees work through interactive animations and explanations.</p>
+      <a href="dashbored.html" class="btn">Start Exploring</a>
+    </header >
+   </div>
+   <div class="dsv-image">
+    <img src="./DSV.jpeg" height="250px" width="500px">
+   </div>
+    
+  </main>
+
+  <footer>
+    © 2024 <a href="http://www.cs.usfca.edu/galles">David Galles</a>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      //console.log("it is working")
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

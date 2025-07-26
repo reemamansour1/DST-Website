@@ -1,0 +1,76 @@
+<html>
+	<head>
+		
+		<title>
+			Array Stack Visualization 
+		</title>
+		
+		<!-- css sheet for how the page is laid out -->
+		
+		<link rel="stylesheet" href="visualizationPageStyle.css">
+			
+			
+		<!-- jqueury stuff.  Only used for the animation speed slider. -->
+		<link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css">				
+		<script src="ThirdParty/jquery-1.5.2.min.js"></script>
+		<script src="ThirdParty/jquery-ui-1.8.11.custom.min.js"></script>
+				
+		<!-- Javascript for the actual visualization code -->
+		<script type = "application/javascript" src = "AnimationLibrary/CustomEvents.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/UndoFunctions.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimatedObject.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimatedLabel.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimatedCircle.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimatedRectangle.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimatedLinkedList.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/HighlightCircle.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/Line.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/ObjectManager.js"> </script>
+		<script type = "application/javascript" src = "AnimationLibrary/AnimationMain.js"> </script>
+
+		<script type = "application/javascript" src = "AlgorithmLibrary/Algorithm.js"> </script>
+		<script type = "application/javascript" src = "AlgorithmLibrary/StackArray.js"> </script> 
+				
+			
+	 </head> 
+	
+	<body onload="init();" class="VisualizationMainPage">
+		
+		<div id = "container">
+			
+			<div id="header">  
+				<h1>Stack (Array Implementaion)</h1>
+			</div>
+			
+			<div id="mainContent" class="flex-layout"> 
+				<div class="canvas-section">
+					<div id="algoControlSection">
+					<table id="AlgorithmSpecificControls"></table> 
+					</div>
+
+					<canvas id="canvas" width="1000" height="500"></canvas>
+
+					<div id="generalAnimationControlSection">
+					<table id="GeneralAnimationControls"></table>		
+					</div>
+				</div>
+
+				<aside class="explanation-box">
+					<h2>How Stack (Array) Works</h2>
+					<p id="explanationText">A stack is a linear data structure that follows the Last In, First Out (LIFO) principle.</p>
+					<ul>
+						<li><strong>Push:</strong> Adds an element to the top of the stack.</li>
+						<li><strong>Pop:</strong> Removes the top element.</li>
+						<li><strong>Peek:</strong> Shows the top value without removing it.</li>
+					</ul>
+				</aside>
+			</div>
+
+			
+			<div id="footer">  
+				<p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+			</div>
+
+		</div>
+	</body>
+</html>

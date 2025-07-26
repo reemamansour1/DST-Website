@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Queue Visualization</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="visualizationPageStyle.css">
+  <link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css">
+
+  <!-- JavaScript -->
+  <script src="ThirdParty/jquery-1.5.2.min.js"></script>
+  <script src="ThirdParty/jquery-ui-1.8.11.custom.min.js"></script>
+
+  <!-- Animation Libraries -->
+  <script src="AnimationLibrary/CustomEvents.js"></script>
+  <script src="AnimationLibrary/UndoFunctions.js"></script>
+  <script src="AnimationLibrary/AnimatedObject.js"></script>
+  <script src="AnimationLibrary/AnimatedLabel.js"></script>
+  <script src="AnimationLibrary/AnimatedCircle.js"></script>
+  <script src="AnimationLibrary/AnimatedRectangle.js"></script>
+  <script src="AnimationLibrary/AnimatedLinkedList.js"></script>
+  <script src="AnimationLibrary/HighlightCircle.js"></script>
+  <script src="AnimationLibrary/Line.js"></script>
+  <script src="AnimationLibrary/ObjectManager.js"></script>
+  <script src="AnimationLibrary/AnimationMain.js"></script>
+
+  <!-- Algorithm Logic -->
+  <script src="AlgorithmLibrary/Algorithm.js"></script>
+  <script src="AlgorithmLibrary/QueueArray.js"></script>
+</head>
+
+<body onload="init();" class="VisualizationMainPage">
+  <div id="container">
+    <div id="header">
+      <h1>Queue (Array Implementation)</h1>
+    </div>
+
+    <div id="mainContent" class="flex-layout">
+      <div class="canvas-section">
+        <div id="algoControlSection">
+          <table id="AlgorithmSpecificControls"></table>
+        </div>
+
+        <canvas id="canvas" width="1000" height="500"></canvas>
+
+        <div id="generalAnimationControlSection">
+          <table id="GeneralAnimationControls"></table>
+        </div>
+      </div>
+
+      <aside class="explanation-box">
+        <h2>How Queue (Array) Works</h2>
+        <p>A queue is a linear data structure that follows the First In, First Out (FIFO) principle.</p>
+        <ul>
+          <li><strong>Enqueue:</strong> Adds an element at the end (tail) of the queue.</li>
+          <li><strong>Dequeue:</strong> Removes the element from the front (head) of the queue.</li>
+          <li><strong>Clear Queue:</strong> Resets the queue by clearing all elements and setting the head and tail back to zero.</li>
+        </ul>
+        <div id="explanationText"></div> <!-- Dynamic explanation text -->
+      </aside>
+    </div>
+
+    <div id="footer">
+      <p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+    </div>
+  </div>
+</body>
+</html>

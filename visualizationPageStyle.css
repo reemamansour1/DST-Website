@@ -1,0 +1,83 @@
+/* Use a dark blue background theme */
+body {
+  background-color: #001f3f;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+.VisualizationMainPage #header {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+.VisualizationMainPage #header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Footer */
+.VisualizationMainPage #footer {
+  background-color: #003366;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Link styling in footer */
+.VisualizationMainPage #footer a,
+.VisualizationMainPage #header a {
+  color: #66ccff;
+  text-decoration: none;
+}
+
+/* Main layout as side-by-side */
+.flex-layout {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Canvas section */
+.canvas-section {
+  flex: 2;
+  min-width: 600px;
+}
+
+/* Explanation box */
+.explanation-box {
+  background-color: #0a2a5c;
+  color: #ffffff;
+  border-left: 4px solid #3399ff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  max-width: 400px;
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.explanation-box h2 {
+  margin-top: 0;
+  color: #66ccff;
+}
+
+.explanation-box ul {
+  padding-left: 1.2rem;
+}
+
+.explanation-box li {
+  margin-bottom: 0.6rem;
+}
+#header{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical alignment */
+    align-items: center;       /* horizontal alignment */
+    text-align: center;    
+}

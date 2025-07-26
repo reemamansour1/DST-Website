@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Linked List Stack Visualization</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="visualizationPageStyle.css" />
+  <link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css" />
+
+  <!-- JavaScript -->
+  <script src="ThirdParty/jquery-1.5.2.min.js"></script>
+  <script src="ThirdParty/jquery-ui-1.8.11.custom.min.js"></script>
+
+  <!-- Animation Libraries -->
+  <script src="AnimationLibrary/CustomEvents.js"></script>
+  <script src="AnimationLibrary/UndoFunctions.js"></script>
+  <script src="AnimationLibrary/AnimatedObject.js"></script>
+  <script src="AnimationLibrary/AnimatedLabel.js"></script>
+  <script src="AnimationLibrary/AnimatedCircle.js"></script>
+  <script src="AnimationLibrary/AnimatedRectangle.js"></script>
+  <script src="AnimationLibrary/AnimatedLinkedList.js"></script>
+  <script src="AnimationLibrary/HighlightCircle.js"></script>
+  <script src="AnimationLibrary/Line.js"></script>
+  <script src="AnimationLibrary/ObjectManager.js"></script>
+  <script src="AnimationLibrary/AnimationMain.js"></script>
+
+  <!-- Algorithm Logic -->
+  <script src="AlgorithmLibrary/Algorithm.js"></script>
+  <script src="AlgorithmLibrary/StackLL.js"></script>
+</head>
+
+<body onload="init();" class="VisualizationMainPage">
+  <div id="container">
+    <div id="header">
+      <h1>Stack (Linked List Implementation)</h1>
+    </div>
+
+    <div id="mainContent" class="flex-layout">
+      <div class="canvas-section">
+        <div id="algoControlSection">
+          <table id="AlgorithmSpecificControls"></table>
+        </div>
+
+        <canvas id="canvas" width="1000" height="500"></canvas>
+
+        <div id="generalAnimationControlSection">
+          <table id="GeneralAnimationControls"></table>
+        </div>
+      </div>
+
+      <aside class="explanation-box">
+        <h2>How Stack (Linked List) Works</h2>
+        <p id="explanationBox">
+        A stack using a linked list adds and removes from the top (head) of the list. The last element added is the first one removed.
+      </p>
+        <ul>
+          <li><strong>Push:</strong> Adds a new node at the top. The new node becomes the head of the list.</li>
+          <li><strong>Pop:</strong> Removes the top node. The next node becomes the new top.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div id="footer">
+      <p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+    </div>
+  </div>
+</body>
+</html>

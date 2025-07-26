@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Binary Search Tree Visualization</title>
+
+  <!-- CSS (Shared stylesheet for all data structures) -->
+  <link rel="stylesheet" href="visualizationPageStyle.css">
+  <link rel="stylesheet" href="ThirdParty/jquery-ui-1.8.11.custom.css">
+
+  <!-- jQuery -->
+  <script src="ThirdParty/jquery-1.5.2.min.js"></script>
+  <script src="ThirdParty/jquery-ui-1.8.11.custom.min.js"></script>
+
+  <!-- Animation Libraries -->
+  <script src="AnimationLibrary/CustomEvents.js"></script>
+  <script src="AnimationLibrary/UndoFunctions.js"></script>
+  <script src="AnimationLibrary/AnimatedObject.js"></script>
+  <script src="AnimationLibrary/AnimatedLabel.js"></script>
+  <script src="AnimationLibrary/AnimatedCircle.js"></script>
+  <script src="AnimationLibrary/AnimatedRectangle.js"></script>
+  <script src="AnimationLibrary/AnimatedLinkedList.js"></script>
+  <script src="AnimationLibrary/HighlightCircle.js"></script>
+  <script src="AnimationLibrary/Line.js"></script>
+  <script src="AnimationLibrary/ObjectManager.js"></script>
+  <script src="AnimationLibrary/AnimationMain.js"></script>
+
+  <!-- Algorithm Logic -->
+  <script src="AlgorithmLibrary/Algorithm.js"></script>
+  <script src="AlgorithmLibrary/BST.js"></script>
+</head>
+
+<body onload="init();" class="VisualizationMainPage">
+  <div id="container">
+    <div id="header">
+      <h1>Binary Search Tree</h1>
+    </div>
+
+    <div id="mainContent" class="flex-layout">
+      <!-- Canvas Section for BST Visualization -->
+      <div class="canvas-section">
+        <div id="algoControlSection">
+          <table id="AlgorithmSpecificControls"></table>
+        </div>
+
+        <canvas id="canvas" width="1000" height="500"></canvas>
+
+        <div id="generalAnimationControlSection">
+          <table id="GeneralAnimationControls"></table>
+        </div>
+      </div>
+
+      <!-- Explanation Section -->
+      <aside class="explanation-box">
+        <h2>How Binary Search Trees Work</h2>
+        <p id="dynamic-explanation">
+          A Binary Search Tree (BST) is a special type of binary tree that keeps elements in a sorted order.
+          Each node contains a value, and it can have up to two children: a left child and a right child.
+        </p>
+        <ul>
+          <li><strong>Left Child:</strong> If a new value is <em>less than</em> the current node's value, it goes to the left.</li>
+          <li><strong>Right Child:</strong> If a new value is <em>greater than</em> the current node's value, it goes to the right.</li>
+        </ul>
+        <p>
+          This rule applies recursively at each node, which helps maintain an ordered structure and allows for efficient operations.
+        </p>
+        <ul>
+          <li><strong>Insert:</strong> Traverse from the root, moving left or right depending on comparisons, and place the new value in the correct position.</li>
+          <li><strong>Find:</strong> Navigate the tree using the same logic to quickly locate a value.</li>
+          <li><strong>Delete:</strong> Remove a node and adjust the tree to keep it properly ordered.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <div id="footer">
+      <p><a href="Algorithms.html">Algorithm Visualizations</a></p>
+    </div>
+  </div>
+
+  <!-- JavaScript to initialize BST -->
+  <script>
+    function init() {
+      var animManag = initCanvas();
+      currentAlg = new BST(animManag, canvas.width, canvas.height);
+    }
+  </script>
+</body>
+</html>
